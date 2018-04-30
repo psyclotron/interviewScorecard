@@ -1,286 +1,163 @@
+/*
+@author: github.com/mesudip
+@edited: github.com/....
+@edited:
+This  File contains the custom style rules for the elements that
+are specific to particular page. */
+
+/**
+
+COLORS:: When we have to choose a color, choose from here, because this is the color palette we are using.
+
+    Black       : #000;
+    White       : #fff;
+    Dark Cyan   : #00948B;
+    Powder Blue : #B7D6E5;
+    Steel Gray  : #41464B;
+
+ */
+
+/*The list of colors so that i can see them visually in the ide.*/
+.colors{
+    background-color:#000000;
+    color:#ffffff;
+    text-decoration-color: #00948b;
+    border-left-color:#b7d6e5;
+    border-right-color:#41464b;
+
+}
+
+    /****************************************************************
+    ***************---- CSS STYLING for the ----*********************
+    ***************-----  Admin Edit page ------*********************
+    *****************************************************************/
+
+#profile-image-upload{
+    padding:6pt;
+    margin-top:20pt;
+    margin-right:30pt;
+    text-align: center;
+    border:solid 2px;
+    min-width:130pt;
+}
+
+#profile-image-upload div{
+    padding-top:10pt;
+}
+
+#profile-image-upload > div + div,
+#profile-image-upload:hover > div,
+#profile-image-upload:hover .fa,
+#profile-image-upload > .fa + .fa{
+    display:none;
+}
+#profile-image-upload:hover{
+    background:#B7D6E5 ;
+}
+
+#profile-image-upload:hover > div+div,
+#profile-image-upload:hover > .fa + .fa {
+    display:block;
+}
+
+
 /****************************************************************
-    Default for forms
+***************---- CSS STYLING for the ----*********************
+***************----  Interview list page ------*********************
 *****************************************************************/
-
-@font-face {
-    font-family: 'Stylish';
-    src: url('../fonts/Stylish-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-html {
-    min-height: 100%;
-    width: 100%;
-}
-
-body {
-    font-family:Roboto;
-    min-height: 100%;
-    width: 100%;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-}
-
-hr {
-    height: 3px;
-}
-
-/****************************************************************
-    Default for classes
-*****************************************************************/
-
-.match-parent{
-    width:100%;
-    height:100%;
-}
-.match-parent-width{
-    width:100%;
-}
-.match-parent-height{
-    height:100%;
-}
-.large-padding-clear{
-    padding:20px;
-    width:80%;
-    height:90%;
-    border:solid 3px transparent;
-}
-
-.large-padding-border{
-    padding:20px;
-    width:80%;
-    height:90%;
-    border:solid 3px black;
-}
-
-.content-card{
-    font-size:13pt;
-    text-align:center;
-    align-content: center;
-    align-items: center;
-    min-height: 220px;
-}
-.vcenter{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    display:inline-block;
-}
-.figure-caption{
-    color:black;
-    margin-top:7px;
-}
-.image-profile{
-    height: 100px;
-    height: 100px;
-    border:solid 3px #5a6268;
-}
-.search-right{
-    min-width:80%;
+.search-button{
+    display: inline-block;
     position:absolute;
     right:30px;
-    display:inline-block;
+    top:15px;
+}
+.search-button:hover{
+    transform: scale(1.3)
 
 }
-.shifted-bottom-1x{
-    margin-top:4pt;
-}
-.shifted-bottom-2x{
-    margin-top:8pt;
-}
-.shifted-bottom-3x{
-    margin-top:12pt;
-}
-.padded-left-1x{
-    padding-left:4pt;
-}
-.padded-left-2x{
-    padding-left:8pt;
-}
-.padded-left-3x{
-    padding-left:12pt;
-}
-.padded-left-4x{
-    padding-left:16pt;
-}
-.padded-left-5x{
-    padding-left:20pt;
-}
-.padded-left-8x{
-    padding-left:32pt;
-}
-/****************************************************************
-    Default for form elements
-*****************************************************************/
-.shifted-right {
-    margin-top: 5px;
-    margin-left: 30px;
-}
-.shifted-left {
-    margin-top: 5px;
-    margin-right: 30px;
-}
-.btn{
-    border:solid 2px #2F3133;
-    border-radius: 5%;
-    background-color:white;
-}
-.border-fancy{
-    border:solid 2px #2f3113;
-    border-radius:15%;
-    background-color:snow;
-}
-.custom-select{
-    border:solid 2px #2f3113;
-    border-radius:15%;
-    background-color:snow;
-}
-label,input,select,button{
-    font-family:Stylish,Roboto;
-}
-
-/***************************************************************
-    Profile Pic and Heading
-*****************************************************************/
-
-#header {
-    min-height: 120pt;
-    padding-top: 5px;
-    padding-left: 1px;
-    padding-right: 1px;
-    padding-bottom: 2px;
-    margin-bottom:5px;
-    vertical-align: baseline;
-}
-
-#header-website-text {
-    height: 100pt;
-    line-height: 100pt;
-}
-
-#profile-image {
-    margin-top:18px;
-    height: 100px;
-    height: 100px;
-    border:solid 3px #5a6268;
-}
-#user-name{
-    padding-top:5px;
-}
-#content-header{
-    padding:5px;
-    padding-right:20px;
-    padding-left:20px;
-}
-#header-separtion-line{
-    margin-top: 8px;
-    margin-bottom:0px;
-    height:10px;
-    padding-bottom:12px;
-    border-width:2px;
-    border-color:black;
-    border-radius: 8px;
-    color:black;
-}
-#option-logout{
-    position:absolute;
-    bottom:10px;
-    right:50px;
-}
-/************************ ****************************************
-    Navigation bar properties
-*****************************************************************/
-
-#navbar {
-    text-align: right;
-    font-size: medium;
-    font-style: oblique;
-    font-weight: bold;
-    padding-right: 0px;
-    max-width: 160px;
-}
-
-#navbar ul li {
-    border: 4px solid;
-    border-right: 0px;
-    margin-top: 10px;
-    padding-top:3px;
-    padding-right: 10px;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 30%;
-    color: black;
-    padding-left: 20%;
-    min-height: 40px;
-}
-
-#navbar a {
-    color: black;
-}
-
-#navbar li.active a {
-    border-bottom:solid 2px black;
-    border-bottom-left-radius: 2px;
-}
-
-/****************************************************************
-    Page Content Properties
-*****************************************************************/
 .search-input{
-    margin-right:20px;
-    width:auto;
-    max-width:70%;
+    padding-right:35px;
+    margin-bottom: 30pt;
+}
+.search-input:hover + i {
+    transform:scale(1.3);
+}
+.search-input:hover{
+    transform:scale(1,1.08);
+    box-shadow: 2px 1px lightgrey   ;
+}
+
+.card{
+    margin-right:10px;
+    margin-left:10px;
+    min-width:320px;
+    margin-bottom:15px;
+}
+.card .card-body{
+    margin-top:10px;
+}
+.card .card-body .card-subtitle{
+    margin-bottom:15px;
+}
+
+.card-control{
+    position:absolute;
+    right:16pt;
+    top:16pt;
+    font-size:14pt;
+}
+.card-editable .card-control{
+    display:none;
+}
+.card-editable:hover .card-control{
+    display:block;
+}
+.card-editable:hover{
+    background-color: #dcfbfb;
+    transform:scale(1.07);
+    box-shadow: 3px 3px darkgrey;
+}
+
+/****************************************************************
+***************---- CSS STYLING for the ----*********************
+***************----  Interview edit page ----********************
+*****************************************************************/
+fieldset{
+    margin-top:10pt;
+}
+
+.card img{
+    max-height:120pt;
 }
 .search-block{
-    margin-right:15px;
-    margin-bottom:20px;
+    margin-bottom:16pt;
 }
 
-#body {
-    min-height: 100%;
+.card-clear .card-header,
+.card-clear .card-footer,
+.card-clear {
+    border:0px;
 }
 
-#body-content {
-    padding: 10px 1px 0px;
-    min-height: 80%;
+.card-editable:hover i{
+    transform:scale(1.2);
 }
-#content-header{
-
+.card-editable:hover{
 }
-#content {
-    padding-top: 20px;
-    padding-bottom:20px;
-    margin-left: 0px;
-    border: solid 3px;
-    border-radius: 5%;
-    border-top-left-radius: 1%;
-    height: 100%;
-
+.card-control i:hover{
+    transform: scale(1.5);
 }
-#edit-form {
-    position: absolute;
-    margin-left: 20px;
-    width: 60%;
-    min-width: 400px;
-    max-width: 600px;
-
+.card-control .fa-minus-square{
+    color: #660000;
+}
+.card-control .fa-edit{
+    color: #00006e;
+}
+.fa-trash-alt{
+    color:#660000;
+}
+.card-create:hover{
+    transform:scale(1.04);
+    box-shadow: 1px 3px lightgrey;
 }
 
-/****************************************************************
-    Admin Edit
-*****************************************************************/
-
-#profile-image-upload {
-    position: absolute;
-    right: 20px;
-    align-content: center;
-    text-align: center;
-    border: solid 2px;
-    border-radius: 1%;
-    padding: 10px;
-    margin-right: 20px;
-}

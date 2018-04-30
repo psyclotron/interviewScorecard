@@ -6,72 +6,78 @@
     <title>Home - Interview Assistant</title>
     <link rel="stylesheet" href="../font-awesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/app.css">
 </head>
-<body>
-<div id="body" class="container">
-    <div class="row" id="header">
-        <div class="col-md-2 align-content-center text-center">
-            <!--<img  class="rounded-circle" id="profile-image" src="../images/profile-pic.jpeg">-->
-            <!--<br>-->
-            <!--<div id="user-name">Annie Chhoing Dolma</div>-->
-        </div>
-        <div class="col-md-2 align-content-center text-center">
-            <img class="rounded-circle" id="profile-image" src="../images/profile-pic.jpeg">
-            <br>
-            <div id="user-name">Annie Chhoing Dolma</div>
-        </div>
+<body class="container-fluid">
+<div class="row" id="header">
+    <div class="col-2 align-content-center text-center">
+        <img class="rounded-circle" id="profile-image" src="../images/profile-pic.jpeg">
+        <br>
+        <div id="user-name">Annie Chhoing Dolma</div>
+    </div>
 
-        <div class="col-md-8" id="header-website-info">
-            <h1 class="text-capitalize text-center" id="header-website-text">Interview Assistant</h1>
-            <div class="text-danger" id="option-logout">
-                Logout &nbsp;
-                <i class="fa fa-eject"></i>
-            </div>
+    <div class="col-10" id="header-website-info">
+        <h1 class="text-capitalize text-right h1" id="  header-website-text">Interview Assistant</h1>
+        <div class="text-danger" id="option-logout">
+            Logout &nbsp;
+            <i class="fa fa-eject"></i>
         </div>
     </div>
-    <div class="row" id="body-content">
-        <div class="col-md-2" id="navbar">
-            <ul class="nav navbar-nav">
-                <li class="active nav-content"><a href="#"> Interviews</a></li>
-                <li class="nav-content"><a href="#">Interviewers</a></li>
-                <li class="nav-content"><a href="#">Admins</a></li>
-            </ul>
+</div>
+<div class="row" id="body-content">
+    <nav class="col-lg-2 col-sm-3 " id="navbar">
+        <div id="nav-content">
+            <a href="home.html">
+                <div class="nav-item active text-center"><span><i class="fa fa-map-marker"></i> Interviews</span></div>
+            </a>
+            <a href="interviewer-list.html">
+                <div class="nav-item text-center"><span><i class="fa fa-map-marker"></i> Interviewers</span></div>
+            </a>
+            <a href="admin-list.html">
+                <div class="nav-item text-center"><span><i class="fa fa-map-marker"></i> Admin</span></div>
+            </a>
+            <!--<div class="nav-item active">Interviewers</div>-->
+            <!--<div class="nav-item">Admins</div>-->
         </div>
-        <div class="col-md-10" id="content">
-            <div class="h2 content-header text-md-center text-uppercase">
-                <div id="content-header">
-                    <i class="fa fa-times-circle float-left"></i>
-                    Edit Interview
-                    <i class="fa fa-check-circle float-right"></i>
-                </div>
-                <hr id="header-separtion-line"/>
-            </div>
-            <div id="content-detail">
-                <form>
-                    <fieldset>
-                        <legend><strong>Event Detail</strong></legend>
+    </nav>
 
-                        <div class="form-group shifted-right">
+    <div class="col-lg-10 col-sm-9   container-fluid " id="content">
+        <!--The header of the body-->
+        <div class="row h1 content-header text-center text-uppercase">
+            <div id="content-header" class="col-md-12">
+                <i class="fa fa-times-circle float-left"></i>
+                Interview Edit
+                <i class="fa fa-check-circle float-right"></i>
+            </div>
+        </div>
+        <hr id="header-separtion-line"/>
+        <div id="content-detail container-fluid">
+            <form>
+                <fieldset>
+                    <legend><strong>Event Detail</strong></legend>
+                    <div class="container pl-4">
+                        <div class="form-group form-row ">
                             <label class="col-3">Title</label>
-                            <input class="col-auto" placeholder="Interview Title">
+                            <input class="col-9 form-control" placeholder="Interview Title">
                         </div>
-                        <div class="form-group shifted-right">
+                        <div class="form-group form-row">
                             <label class="col-3">Interview Start Date</label>
-                            <input class="col-auto" type="date" placeholder="Choose date">
+                            <input class="col-9 form-control" type="date" placeholder="Choose date">
                         </div>
-                        <div class="form-group shifted-right">
+                        <div class="form-group form-row">
                             <label class="col-3">Location</label>
-                            <input class="col-auto" placeholder=" Interview Location">
+                            <input class="col-9 form-control" placeholder=" Interview Location">
                         </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend><strong>Evaluation Criteria</strong></legend>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Evaluation Criteria</strong></legend>
+                    <div class="container-fluid pl-4">
                         <table class="table table-hover table-responsive-md">
-                            <tr class="thead-dark">
+                            <tr class="thead-light">
                                 <th></th>
-                                <th>Title <br>(Evaluation Parameter)</th>
+                                <th>Title (Evaluation Parameter)</th>
                                 <th>Weight</th>
                                 <th>Remarks</th>
                             </tr>
@@ -90,123 +96,117 @@
                                 </td>
                             </tr>
                         </table>
-                    </fieldset>
-                    <fieldset>
-                        <legend><strong>Interviewers</strong></legend>
-                        <div class="container-fluid">
-                            <div class="row search-block input-group shifted-right">
-                                <div class="col-auto form-inline">
-                                    <i class="fa fa-search " style="position:absolute; left: 16pt;"></i>
-                                    <input class="border-fancy padded-left-5x ">
-
-                                    <i class="fa fa-user-plus padded-left-2x"></i>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row align-content-center text-center shifted-right">
-                            <div class="col-md-3 text-center content-card">
-                                <div class="vcenter col-md-12 large-padding-clear">
-                                    <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                    <br>
-                                    <div class="">Annie Chhoing Dolma</div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 text-center content-card">
-                                <div class="vcenter col-md-12 large-padding-clear">
-                                    <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                    <br>
-                                    <div class="">Annie Chhoing Dolma</div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 text-center content-card">
-                                <div class="vcenter col-md-12 large-padding-clear">
-                                    <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                    <br>
-                                    <div class="">Annie Chhoing Dolma</div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 text-center content-card">
-                                <div class="vcenter col-md-12 large-padding-clear">
-                                    <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                    <br>
-                                    <div class="">Annie Chhoing Dolma</div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 text-center content-card">
-                                <div class="vcenter col-md-12 large-padding-clear">
-                                    <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                    <br>
-                                    <div class="">Annie Chhoing Dolma</div>
-                                </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><strong>Interviewers</strong></legend>
+                    <div class="container-fluid pl-4">
+                        <div class="row search-block input-group">
+                            <div class="form-group col-auto form-inline">
+                                <i class="fa fa-search " style="position:absolute; left: 16pt;"></i>
+                                <input class="form-control padded-left-6x">
+                                <i class="fa fa-user-plus padded-left-2x"></i>
                             </div>
                         </div>
-                    </fieldset>
-                </form>
-            </div>
-            </fieldset>
-            <fieldset>
-                <legend>Interviewees</legend>
-                <div class="container-fluid">
-                    <div class="row search-block input-group shifted-right">
-                        <div class="col-auto form-inline">
-                            <i class="fa fa-search " style="position:absolute; left: 16pt;"></i>
-                            <input class="border-fancy padded-left-5x ">
-                            <i class="fa fa-user-plus padded-left-2x"></i>
+                        <div class="row text-center">
+                            <div class="card card-clear card-editable">
+                                <div class="card-control">
+                                    <div><i class="fa fa-minus-square"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
+                                </div>
+                                <div class="card-footer">
+                                    Aarati Sharma
+                                </div>
+                            </div>
+
+                            <div class="card card-clear card-editable">
+                                <div class="card-control">
+                                    <div><i class="fa fa-minus-square"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
+                                </div>
+                                <div class="card-footer">
+                                    Aarati Sharma
+                                </div>
+                            </div>
+
+                            <div class="card card-clear card-editable">
+                                <div class="card-control">
+                                    <div><i class="fa fa-minus-square"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
+                                </div>
+                                <div class="card-footer">
+                                    Aarati Sharma
+                                </div>
+                            </div>
+
+                            <div class="card card-clear card-editable">
+                                <div class="card-control">
+                                    <div><i class="fa fa-minus-square"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
+                                </div>
+                                <div class="card-footer">
+                                    Aarati Sharma
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="row align-content-center text-center shifted-right">
-                        <div class="col-md-3 text-center content-card">
-                            <div class="vcenter col-md-12 large-padding-clear" data-target="#form-add-interviewee"
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Interviewees</strong></legend>
+                    <div class="container-fluid pl-4">
+                        <!--The search bar at the begining.-->
+                        <div class="row search-block input-group ">
+                            <div class="form-group col-auto form-inline">
+                                <i class="fa fa-search " style="position:absolute; left: 16pt;"></i>
+                                <input class="form-control padded-left-6x">
+                                <i class="fa fa-user-plus padded-left-2x"></i>
+                            </div>
+                        </div>
+
+                        <!--The Card views in interviewees-->
+                        <div class="row align-content-center text-center">
+                            <!-- Add new interview button-->
+                            <div class="card card-clear card-create" data-target="#form-add-interviewee"
                                  data-toggle="modal">
-                                <div class="vcenter">
-                                    <i class="fa fa-4x fa-user-plus"></i>
+                                <div class="card-body">
+                                    <i class="fa fa-8x fa-user-plus"></i>
+                                </div>
+                                <div class="card-footer">
                                     <div class="figure-caption shifted-left">Add New</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 text-center content-card ">
-                            <div class="vcenter col-md-12 large-padding-clear">
-                                <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                <br>
-                                <div class="">Annie Chhoing Dolma</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 text-center content-card">
-                            <div class="vcenter col-md-12 large-padding-clear">
-                                <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                <br>
-                                <div class="">Annie Chhoing Dolma</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 text-center content-card">
-                            <div class="vcenter col-md-12 large-padding-clear">
-                                <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                <br>
-                                <div class="">Annie Chhoing Dolma</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 text-center content-card">
-                            <div class="vcenter col-md-12 large-padding-clear">
-                                <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                <br>
-                                <div class="">Annie Chhoing Dolma</div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 text-center content-card">
-                            <div class="vcenter col-md-12 large-padding-clear">
-                                <img class="rounded-circle image-profile" src="../images/profile-pic.jpeg">
-                                <br>
-                                <div class="">Annie Chhoing Dolma</div>
+                            <!--Interviewees assigned to this meeting -->
+                            <div class="card card-clear card-editable">
+                                <div class="card-control">
+                                    <div class="mb-2"><i class="fa fa-edit"></i></div>
+                                    <div><i class="fa fa-minus-square"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
+                                </div>
+                                <div class="card-footer">
+                                    Aarati Sharma
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </fieldset>
+                </fieldset>
             </form>
         </div>
     </div>
 </div>
+
+<!--The modal that is gonna pop up when we click on add interviewee.-->
 <div id="form-add-interviewee" class="modal fade" role="dialog">
     <div class="modal-dialog" role="document">
         <!-- Modal content-->
@@ -215,7 +215,7 @@
                 <div class="h2 content-header text-md-center text-uppercase match-parent-width">
                     <div id="add-inerviewee-header">
                         <i class="fa fa-times-circle float-left"></i>
-                        Edit Interviewer
+                        Edit Applicant Info
                         <i class="fa fa-check-circle float-right"></i>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                         <legend>Educational Details</legend>
                         <table class="table-responsive">
                             <th>
-                                <
+                                wersdf
                             </th>
                         </table>
                     </fieldset>
@@ -261,8 +261,11 @@
                     <span id="login-status"></span>
                     <div class="clearfix">
                         <a href="#" class="pull-left forget-pass" data-toggle="modal" data-target="#reset-pass-modal">Forget
-                            Password?</a>
-                        <button type="submit" class="btn-univhub pull-right">Login</button>
+                            <a href="#" class="pull-left forget-pass" data-toggle="modal"
+                               data-target="#reset-pass-modal">Forget
+                                Password?</a>
+                            <button type="submit" class="btn-univhub pull-right">Login</button>
+                        </a>
                     </div>
                 </form>
             </div>
