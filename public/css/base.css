@@ -27,24 +27,26 @@ COLORS:: When we have to choose a color, choose from here, because this is the c
 /*The default properties for the html*/
 html {
     min-height: 100%;
-    height:auto !important; /* cross-browser */
     height: 100%; /* cross-browser */
     width: 100%;
     padding:0;
     margin:0;
 }
-html,body,p,h,div,span,form{
+
+html, body, p, div, span, form {
     text-decoration-color: #00948B;
     color:#00948B;
-    font-size:			20px;
+    font-size: 12px;
 }
 
 body {
     background-color: #ffffff;
     width:100%;
-    min-width:870px;
+    min-width: 600px;
     height: 100%;
     min-height: 100%;
+    padding: 0 !important; /*For dealing with the instability of page after the modal is closed*/
+
 
 }
 a:hover, a:visited, a:link, a:active
@@ -150,25 +152,21 @@ border-bottom: none;
 
 #header {
     background:linear-gradient(#dee4ee,#b7d6e5);
-    min-height: 120pt;
-    padding: 5px 1px 2px;
-    margin-bottom:40pt;
-    vertical-align: baseline;
+    margin: 0;
+    margin-bottom: 20pt;
 }
 
 #header-website-text {
-    height: 100pt;
-    line-height: 100pt;
+    height: 60pt;
+    line-height: 60pt;
 }
 
 #profile-image {
-    margin-top:18px;
-    height: 100px;
-    border:solid 3px #5a6268;
+    margin-top: 0.2rem;
+    height: 60pt;
+    border: solid 2px #5a6268;
 }
-#user-name{
-    padding-top:5px;
-}
+
 #option-logout{
     position:absolute;
     bottom:10px;
@@ -181,7 +179,7 @@ border-bottom: none;
 #navbar {
     z-index:1;
     font-size: medium;
-    padding-right: 0px;
+    padding-right: 0;
 }
 
 #nav-content{
@@ -201,8 +199,8 @@ border-bottom: none;
     padding-top:6px;
     padding-right:10px;
     border:solid #d7d7d7;
-    border-top:0px;
-    border-left:0px;
+    border-top: 0;
+    border-left: 0;
     border-right:1px;
     border-bottom:2px;
     border-radius: 5px;
@@ -249,22 +247,28 @@ border-bottom: none;
 *****************************************************************/
 
 #body-content {
+    /*transform:translate(0,50%) scale(0.8) translate(0,50%);*/
     min-height:100%;
-    margin-right:30px;
-    padding: 10px 1px 0px;
+    padding-left: 20pt;
+    padding-right: 30pt;
+    /*padding: 10px 1px 0px;*/
 }
 #content-header {
-    font-size:30pt;
+    font-size: 16pt;
+}
+
+#content-header i {
+    font-size: 18pt;
 }
 #content {
     padding-top: 20px;
     padding-bottom:20px;
     margin-bottom:10px;
-    margin-left: 0px;
-
+    margin-left: 0;
+    padding-right: 5pt;
     padding-left: 50px;
     border: 1px solid #00948B;
-    box-shadow: 2px 3px grey;
+    box-shadow: 2px 3px lightgrey;
     border-radius: 12pt;
     height: 100%;
     background-color:#ffffff;
@@ -280,17 +284,15 @@ border-bottom: none;
 
 
 #content-header{
-    padding:5px;
     padding-right:30px;
     padding-left:20px;
 }
 #header-separtion-line{
     margin-top: 10px;
     margin-bottom:5px;
-    height:10px;
-    padding-bottom:12px;
     border-width:2px;
-    border-color:#00948B;;
+    border-color: #00948B;
+    width: 100%;
 }
 
 .fa-times-circle{
@@ -310,3 +312,4 @@ border-bottom: none;
 #content-detail{
     padding-left:30px;
 }
+

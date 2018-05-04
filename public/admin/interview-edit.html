@@ -25,7 +25,8 @@
         </div>
     </div>
 </div>
-<div class="row" id="body-content">
+<div class="container-fluid" id="body-content">
+    <div class="row">
     <nav class="col-lg-2 col-sm-3 " id="navbar">
         <div id="nav-content">
             <a href="home.html">
@@ -50,13 +51,18 @@
                 Interview Edit
                 <i class="fa fa-check-circle float-right"></i>
             </div>
+            <div class="float-right text-right mt-4 match-parent-width mr-5">
+                <a href="interview-result.html">
+                    <button type="button" class="btn-info float-right">View Result</button>
+                </a>
+            </div>
         </div>
-        <hr id="header-separtion-line"/>
-        <div id="content-detail container-fluid">
-            <form>
+        <hr class="row" id="header-separtion-line"/>
+        <div id="content-detail" class="row container-fluid align-left">
+            <form class="match-parent">
                 <fieldset>
                     <legend><strong>Event Detail</strong></legend>
-                    <div class="container pl-4">
+                    <div class="container-fluid">
                         <div class="form-group form-row ">
                             <label class="col-3">Title</label>
                             <input class="col-9 form-control" placeholder="Interview Title">
@@ -85,8 +91,7 @@
                                 <th>1</th>
                                 <td>Algorithms</td>
                                 <td>70</td>
-                                <td>This is to be given on basis of link list
-                                    <only></only>
+                                <td>This is to be given on basis of link list only
                                 </td>
                             </tr>
                             <tr>
@@ -104,12 +109,12 @@
                         <div class="row search-block input-group">
                             <div class="form-group col-auto form-inline">
                                 <i class="fa fa-search " style="position:absolute; left: 16pt;"></i>
-                                <input class="form-control padded-left-6x">
+                                <input class="form-control padded-left-6x" title="search interviewers">
                                 <i class="fa fa-user-plus padded-left-2x"></i>
                             </div>
                         </div>
                         <div class="row text-center">
-                            <div class="card card-clear card-editable">
+                            <div class="card card-clear card-hover-effect">
                                 <div class="card-control">
                                     <div><i class="fa fa-minus-square"></i></div>
                                 </div>
@@ -117,46 +122,37 @@
                                     <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
                                 </div>
                                 <div class="card-footer">
-                                    Aarati Sharma
+                                    <div>Name Surname</div>
+                                    <div class="mt-2">
+                                        <select class="form-control" title="select evaluation criteria">
+                                            <option value="0">Algorithms</option>
+                                            <option value="1"> Criteria 1</option>
+                                            <option value="1"> Criteria 2</option>
+                                            <option value="1"> Criteria 3</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="card card-clear card-editable">
+                            <div class="card card-clear card-hover-effect">
                                 <div class="card-control">
                                     <div><i class="fa fa-minus-square"></i></div>
                                 </div>
                                 <div class="card-body">
                                     <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
                                 </div>
-                                <div class="card-footer">
-                                    Aarati Sharma
+                                <div class="card-header">
+                                    <div>Name Surname</div>
+                                    <div class="mt-2">
+                                        <select class="form-control" title="select evaluation criteria">
+                                            <option value="0">Algorithms</option>
+                                            <option value="1"> Criteria 1</option>
+                                            <option value="1"> Criteria 2</option>
+                                            <option value="1"> Criteria 3</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="card card-clear card-editable">
-                                <div class="card-control">
-                                    <div><i class="fa fa-minus-square"></i></div>
-                                </div>
-                                <div class="card-body">
-                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
-                                </div>
-                                <div class="card-footer">
-                                    Aarati Sharma
-                                </div>
-                            </div>
-
-                            <div class="card card-clear card-editable">
-                                <div class="card-control">
-                                    <div><i class="fa fa-minus-square"></i></div>
-                                </div>
-                                <div class="card-body">
-                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
-                                </div>
-                                <div class="card-footer">
-                                    Aarati Sharma
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </fieldset>
@@ -168,7 +164,7 @@
                         <div class="row search-block input-group ">
                             <div class="form-group col-auto form-inline">
                                 <i class="fa fa-search " style="position:absolute; left: 16pt;"></i>
-                                <input class="form-control padded-left-6x">
+                                <input class="form-control padded-left-6x" title="search interviewees">
                                 <i class="fa fa-user-plus padded-left-2x"></i>
                             </div>
                         </div>
@@ -176,7 +172,7 @@
                         <!--The Card views in interviewees-->
                         <div class="row align-content-center text-center">
                             <!-- Add new interview button-->
-                            <div class="card card-clear card-create" data-target="#form-add-interviewee"
+                            <div class="card card-clear card-hover-effect" data-target="#form-add-interviewee"
                                  data-toggle="modal">
                                 <div class="card-body">
                                     <i class="fa fa-8x fa-user-plus"></i>
@@ -185,94 +181,180 @@
                                     <div class="figure-caption shifted-left">Add New</div>
                                 </div>
                             </div>
-                            <!--Interviewees assigned to this meeting -->
-                            <div class="card card-clear card-editable">
+                            <!--Interviewees  already assigned to this meeting -->
+                            <div class="card card-clear card-hover-effect">
                                 <div class="card-control">
-                                    <div class="mb-2"><i class="fa fa-edit"></i></div>
+                                    <div class="mb-2" data-target="#form-add-interviewee" data-toggle="modal"><i
+                                            class="fa fa-edit"></i></div>
                                     <div><i class="fa fa-minus-square"></i></div>
                                 </div>
                                 <div class="card-body">
                                     <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
                                 </div>
                                 <div class="card-footer">
-                                    Aarati Sharma
+                                    Name Surname
                                 </div>
                             </div>
+
+                            <div class="card card-clear card-hover-effect">
+                                <div class="card-control">
+                                    <div class="mb-2" data-target="#form-add-interviewee" data-toggle="modal"><i
+                                            class="fa fa-edit"></i></div>
+                                    <div><i class="fa fa-minus-square"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
+                                </div>
+                                <div class="card-footer">
+                                    Name Surname
+                                </div>
+                            </div>
+
+                            <div class="card card-clear card-hover-effect">
+                                <div class="card-control">
+                                    <div class="mb-2" data-target="#form-add-interviewee" data-toggle="modal"><i
+                                            class="fa fa-edit"></i></div>
+                                    <div><i class="fa fa-minus-square"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
+                                </div>
+                                <div class="card-footer">
+                                    Name Surname
+                                </div>
+                            </div>
+
+                            <div class="card card-clear card-hover-effect">
+                                <div class="card-control">
+                                    <div class="mb-2" data-target="#form-add-interviewee" data-toggle="modal"><i
+                                            class="fa fa-edit"></i></div>
+                                    <div><i class="fa fa-minus-square"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <img class="rounded-circle card-image" src="../images/profile-pic.jpeg">
+                                </div>
+                                <div class="card-footer">
+                                    Name Surname
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </fieldset>
             </form>
         </div>
     </div>
+    </div>
 </div>
 
 <!--The modal that is gonna pop up when we click on add interviewee.-->
-<div id="form-add-interviewee" class="modal fade" role="dialog">
-    <div class="modal-dialog" role="document">
+<div id="form-add-interviewee" class="modal fade" role="dialog"
+     aria-labelledby="addIntervieweeModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
                 <div class="h2 content-header text-md-center text-uppercase match-parent-width">
                     <div id="add-inerviewee-header">
-                        <i class="fa fa-times-circle float-left"></i>
+                        <i class="fa fa-times-circle float-left" data-dismiss="modal"></i>
                         Edit Applicant Info
                         <i class="fa fa-check-circle float-right"></i>
                     </div>
                 </div>
             </div>
             <div class="modal-body">
-                <form id="login_form" action="/auth/login.django" method="post">
+                <form id="login_form" action="" method="post">
                     <fieldset>
-                        <legend>Personal Details</legend>
+                        <legend class="mb3">Personal Details</legend>
                         <div class="row">
                             <div class="col-4 text-center">
                                 <div class="col-md-12 border-dark">
                                     <div class="">
                                         <i class="fa fa-4x fa-user-plus"></i>
-                                        <div class="figure-caption shifted-left">User Image</div>
+                                        <div class="figure-caption">User Image</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-7">
                                 <div class="input-group">
-                                    <input class="col-auto" placeholder="Full Name">
+                                    <input class="form-control" placeholder="Full Name">
                                 </div>
                                 <div class="input-group">
-                                    <input class="col-auto" placeholder="Education Degree">
+                                    <input class="form-control" placeholder="Education Degree">
                                 </div>
                                 <div class="input-group">
-                                    <input class="col-auto" placeholder="Email Address">
+                                    <input class="form-control" placeholder="Email Address">
                                 </div>
                             </div>
                         </div>
                     </fieldset>
                     <fieldset>
-                        <legend>Educational Details</legend>
-                        <table class="table-responsive">
-                            <th>
-                                wersdf
-                            </th>
+                        <legend class="mb3">Educational Details</legend>
+                        <table class="table table-hover table-responsive-md">
+                            <tr class="thead-light">
+                                <th></th>
+                                <th>Degree</th>
+                                <th>Institution</th>
+                                <th>Marks</th>
+                                <th>Remarks</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>Bachelors</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>+2</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td colspan="4" class="text-center">
+                                    <i class="fa fa-plus-square"></i> &nbsp;
+                                    Add new Qualification
+                                </td>
+                            </tr>
                         </table>
                     </fieldset>
+                    <fieldset>
+                        <legend class="mb3">Uploaded Documents</legend>
+                        <div class="row ">
+                            <div class="card card-clear">
+                                <div class="card-body text-center">
+                                    <i class="fa fa-upload fa-2x"></i>
+                                </div>
+                                <div class="card-footer text-center">
+                                    Upload File
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <i class="fa fa-file-image fa-2x"></i>
+                                </div>
+                                <div class="card-footer text-center">
+                                    Bachelor Transcript
+                                </div>
+                            </div>
 
-                    <input name="uname" type="text" class="form-control" placeholder="Username or Email" required
-                           required>
-                    <input name="passwd" type="password" class="form-control" placeholder="Password" required>
-                    <span id="login-status"></span>
-                    <div class="clearfix">
-                        <a href="#" class="pull-left forget-pass" data-toggle="modal" data-target="#reset-pass-modal">Forget
-                            <a href="#" class="pull-left forget-pass" data-toggle="modal"
-                               data-target="#reset-pass-modal">Forget
-                                Password?</a>
-                            <button type="submit" class="btn-univhub pull-right">Login</button>
-                        </a>
-                    </div>
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <i class="fa fa-file-image fa-2x"></i>
+                                </div>
+                                <div class="card-footer text-center">
+                                    CV
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
                 </form>
-            </div>
             <div class="modal-footer">
-                <p>Don\t have an account?</p>
-                <button class="btn-univhub" type="button" onclick="window.location.href='/auth/signup.djang'">Create
-                    Univhub Account
+                <button class="btn-danger" type="button">
+                    Reset Form
                 </button>
             </div>
         </div>
