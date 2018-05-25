@@ -1,95 +1,58 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Home - Interview Assistant</title>
+      <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/base.css">
+      <link rel="stylesheet" href="css/app.css">
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+    <body class="container-fluid mainbody">
+    <div class="row" id="header">
+        <div class="col-12 align-content-center text-left">
+            <h1>LIS NEPAL</h1>
+            <h1 class="text-capitalize text-center h1" id="  header-website-text">Interview Assistant</h1>
         </div>
+
+    </div>
+    <div class="cont    ainer-fluid" id="body-content">
+        <div class="row align-content-center">
+            <form class="login-form">
+                <h1 class="text-primary text-center mb-5 pb-3">Login Required</h1>
+                <div class="form-group form-inline">
+                    <div class="col-2 pr-2  text-center">
+                        <i class="fa fa-user "></i>
+                    </div>
+
+                    <input type="text" class="form-control col-10" placeholder="Email Address" title="email address"
+                           id="id_username">
+
+                </div>
+                <div class="form-group form-inline log-status">
+                    <div class="col-2 pr-2 text-center">
+                        <i class="fa fa-lock pr-2"></i>
+                    </div>
+                    <input type="password" class="form-control col-10" id="id_password" title="password">
+
+                </div>
+
+
+                <div class="text-right">
+                    <span class="error">Invalid Credentials</span>
+                    <a class="link" href="#">Lost your password?</a>
+                    <button id="login-btn" type="submit" class="match-parent-width   mt-4">Login</button>
+                </div>
+            </form>
+        </div>
+
+        {{-- <a href="admin/home.html"> Admin Home</a><br/>
+        <a href="interviewer/home.html">Interviewer Home</a> --}}
+    </div>
+
     </body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </html>
